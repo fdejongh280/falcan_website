@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Falcan</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="lib/AOS/aos.css" />
+    
+</head>
+<body>
+
+<div id="fullpage">
+    <div class="section " id="section0">
+        <div class="section_container" id="home_page">
+            <div id="home_page_video_container">
+                <video data-autoplay muted id="home_page_video">
+                    <source src="mov/home_page.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="800" data-aos-once="true" data-aos-duration="3000" id="home_page_logo">
+                <img  id="home_page_logo_title" src="img/logo.jpg"/> 
+                <div class="scroll_down"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="section_container" id="about_page">
+            <div id="about_page_video_container">
+                <video data-autoplay muted id="about_page_video">
+                    <source src="mov/about_me.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="content" id= "about_me_content">
+                <div data-aos="fade" data-aos-easing="ease-in-sine" data-aos-once="true" data-aos-duration="1000" class="title_wrapper">
+                    <h1 >My story</h1>
+                </div>
+                <p data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="700" data-aos-once="true" data-aos-duration="1500"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div class="section_container" id="music_page">
+            <div class="content" id= "music_page_content">
+                <div data-aos="fade" data-aos-easing="ease-in-sine" data-aos-once="true" data-aos-delay="750" data-aos-duration="1000" class="title_wrapper">
+                    <h1>My music</h1>
+                </div>
+                <iframe data-aos="fade" data-aos-easing="ease-in-sine" data-aos-once="true" data-aos-delay="1000" data-aos-duration="1000" src="https://open.spotify.com/embed/artist/00xhag5nG0QqURprmnEtdi" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+                </iframe>
+               <iframe data-aos="fade" data-aos-easing="ease-in-sine" data-aos-once="true" data-aos-delay="1250" data-aos-duration="1000" src="https://open.spotify.com/follow/1/?uri=spotify:artist:00xhag5nG0QqURprmnEtdi?si=CRe9LeyCQL2KD68g1BDQOQ&size=detail&theme=light" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+            </div>
+            <div id="my_music_video_container">
+                <video data-autoplay muted id="music_page_video">
+                    <source src="mov/music_page.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section3">
+        <div class="content" id= "insta_page_content">
+            <div class="insta_container" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-once="true">
+                <!-- SnapWidget -->
+                 <h1 style="margin-left: -30px;">Gallery</h1>
+                <iframe src="https://snapwidget.com/embed/603730" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="content" id= "contact_page_content">
+            <div id="content_inner" data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="2000" data-aos-duration="1000" data-aos-once="true">
+                <div data-aos="fade" data-aos-easing="ease-in-sine" data-aos-delay="2500" data-aos-duration="1000" class="title_wrapper" data-aos-once="true">
+                    <h1>contact</h1>
+                </div>
+                    <form name = "myForm"action="#" onsubmit="return validateForm()">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="">
+
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="">
+                                
+                        <label id= "form_opmerking_or_question" for="note">Message:</label>
+                        <textarea id="note" name="note" placeholder="" style="height:100px;"></textarea>
+                        <button class="btn_primary" type="submit" value="submit">Submit</button>
+                    </form>
+            </div>
+        </div>
+        <video data-autoplay loop muted id="contact_video">
+            <source src="mov/contact2.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<script type="text/javascript" src= "lib/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+<script src="lib/AOS/aos.js"></script>
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        menu: '#menu',
+        anchors: ['home', 'about', 'music', 'insta', 'contact'],
+        autoScrolling: false,
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        navigation: true,
+        navigationPosition: 'right'
+        
+    });
+    AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+      function validateForm() {
+        var x = document.forms["myForm"]
+        console.log(x["name"]);
+        if (x["name"].value == "") {
+            x["name"].style.border = "2px solid red";
+            x["name"].placeholder = "Vul je volledige naam in";
+            return false;
+        }
+        else{ x["name"].style.borderColor = "black";}
+        if (x["email"].value == "") {
+            x["email"].style.border = "2px solid red";
+            x["email"].placeholder = "Vul je email adres in";
+            return false;
+        }
+        else{x["email"].style.border = "0";}
+        if(x['note'].value == "")
+        {
+            x["note"].style.border = "2px solid red";
+            x["note"].placeholder = "Vergeet niet je vraag te stellen";
+            return false;
+        }
+        else{x["note"].style.border = "0"; }
+        var form_data = {}
+        // $.ajax({
+        //     type: "POST",
+        //     url: "php/email_handler.php",
+        //     data: data,
+        //     success: success,
+        //     dataType: dataType
+        // });
+        return false;
+    } 
+
+    document.getElementsByClassName("scroll_down")[0].addEventListener("click", scrollDown);
+    function scrollDown()
+    {
+        myFullpage.moveTo('about', 1);
+    }
+        
+</script>
+
+</body>
+</html>
